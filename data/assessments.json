@@ -1,0 +1,16 @@
+{
+  "2526-IRCC-007": {
+    "title": "Administrative Activities Support Tool",
+    "organization": "Immigration, Refugees and Citizenship Canada",
+    "level": 1,
+    "record": "https://open.canada.ca/data/en/info/71b309a0-efd2-4e85-8124-37e935c23aef",
+    "evidence": "https://open.canada.ca/data/dataset/71b309a0-efd2-4e85-8124-37e935c23aef/resource/bc374086-5077-4b1f-93f0-37e6e2cb74c3/download/annex-a-aast-aia-2025-01-28-en.pdf.pdf"
+  },
+  "2526-IRCC-009": {
+    "title": "Advanced Analytics Triage of Overseas Temporary Resident Visa Applications",
+    "organization": "Immigration, Refugees and Citizenship Canada",
+    "level": 2,
+    "record": "https://open.canada.ca/data/en/dataset/6cba99b1-ea2c-4f8a-b954-3843ecd3a7f0",
+    "evidence": "https://open.canada.ca/data/dataset/6cba99b1-ea2c-4f8a-b954-3843ecd3a7f0/resource/9f4dea84-e7ca-47ae-8b14-0fe2becfe6db/download/trv-aia-en-may-2022.pdf"
+  }
+}

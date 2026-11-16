@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Search reported AI systems across the Government of Canada and read linked impact assessments.">
+  <title>Algorithm Watch · CoolCode</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <header><nav><a href="https://coolcode.ca/"><strong>&gt;_</strong> CoolCode.ca</a><a href="https://github.com/jsdyer/algorithmwatch">Source ↗</a></nav></header>
+  <main>
+    <section class="hero" aria-labelledby="title">
+      <h1 id="title">Algorithm <span>Watch</span></h1>
+      <p>Search the Government of Canada AI Register by institution, use, vendor and personal-information handling. Verified links show published impact assessments for selected systems.</p>
+      <p class="source" id="source-date">Source: Treasury Board of Canada Secretariat</p>
+    </section>
+    <fieldset class="controls" id="controls" disabled>
+      <label>Search systems<input id="query" type="search" placeholder="Try visa, Westlaw or facial recognition"></label>
+      <div class="filters">
+        <label>Institution<select id="organization"><option value="">All institutions</option></select></label>
+        <label>Status<select id="status"><option value="">Any status</option></select></label>
+        <label>Personal information<select id="personal"><option value="">Any</option><option value="Yes">Reported yes</option><option value="No">Reported no</option><option value="unknown">Not reported</option></select></label>
+        <label>Impact assessment<select id="impact"><option value="">Any linkage</option><option value="linked">Verified link</option><option value="unknown">No verified link</option><option value="1">Level I</option><option value="2">Level II</option><option value="3">Level III</option><option value="4">Level IV</option></select></label>
+      </div>
+      <div class="actions"><button id="export" type="button" class="primary" disabled>Export matches</button><button id="reset" type="button">Reset</button></div>
+    </fieldset>
+    <p class="message" id="message" aria-live="polite">Loading the register…</p>
+    <div class="workspace">
+      <section class="panel" aria-labelledby="results-label">
+        <div class="panel-head"><h2 id="results-label">Systems</h2><span class="meta" id="count"></span></div>
+        <ul id="results" class="results"></ul>
+        <div class="pagination"><button id="previous" type="button" disabled>Previous</button><span id="page"></span><button id="next" type="button" disabled>Next</button></div>
+      </section>
+      <article id="detail" class="panel detail" aria-label="System details" tabindex="-1"><p class="muted">Select a system to inspect the reported details.</p></article>
+    </div>
+    <p class="notice">The AI Register is an early public inventory assembled from several sources. Registration does not establish that the system is covered by the Directive on Automated Decision-Making. A missing assessment link means this index has no verified match.</p>
+  </main>
+  <footer>Contains information licensed under the <a href="https://open.canada.ca/en/open-government-licence-canada">Open Government Licence – Canada</a>. <a href="https://open.canada.ca/data/dataset/fcbc0200-79ba-4fa4-94a6-00e32facea6b">Official register and change log</a> · <a href="https://coolcode.ca/governmentmemory/">Government Memory Map</a> · <a href="https://coolcode.ca/atip/">ATIP Explorer</a></footer>
+</body>
+</html>
