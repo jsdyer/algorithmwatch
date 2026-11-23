@@ -1,5 +1,9 @@
 # Algorithm Watch
 
+<!-- coolcode:guide -->
+Filter the register by institution, status or personal-information use and open the original fields before exporting your selection. An unknown impact level means no verified assessment join is available; blank source fields remain unreported.
+<!-- /coolcode:guide -->
+
 A static index of the Government of Canada AI Register MVP. Search systems and filter by institution, reported status, personal information and verified impact level. Open any record to see its source fields, then export the filtered results to CSV.
 
 ```sh

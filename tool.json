@@ -1,0 +1,25 @@
+{
+  "id": "algorithmwatch",
+  "title": "Algorithm Watch",
+  "description": "Explore the federal AI register and find matched impact assessments.",
+  "category": "explorers",
+  "tags": [
+    "aia",
+    "ai",
+    "automated",
+    "decisions",
+    "federal",
+    "risk",
+    "privacy"
+  ],
+  "icon": "workflow",
+  "url": "/algorithmwatch/",
+  "source": "https://github.com/jsdyer/algorithmwatch",
+  "hosting": "project",
+  "access": "browser",
+  "data_info": {
+    "mode": "snapshot",
+    "detail": "Entries from Canada’s AI Register link to verified impact assessments where available.",
+    "cadence": "Weekly"
+  }
+}
