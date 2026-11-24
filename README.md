@@ -16,3 +16,11 @@ The build retrieves the documented official CSV, checks its schema and unique id
 `data/assessments.json` contains individually reviewed Algorithmic Impact Assessment joins. Each join requires an exact normalized register ID, name and institution match. Its level is transcribed from the impact level explicitly published in the linked official PDF. Unmatched levels remain unknown. The match coverage can be expanded by reviewing new published assessments.
 
 Source: [Treasury Board of Canada Secretariat, Government of Canada AI Register MVP](https://open.canada.ca/data/dataset/fcbc0200-79ba-4fa4-94a6-00e32facea6b). Contains information licensed under the [Open Government Licence – Canada](https://open.canada.ca/en/open-government-licence-canada).
+
+<!-- schedule-reliability -->
+## Schedule reliability
+
+Public GitHub repositories can have scheduled workflows disabled after 60 days of inactivity. A separate weekly [schedule guard](.github/workflows/schedule-guard.yml) calls GitHub's enable-workflow API for an explicit list of refresh workflows and itself. It can restore workflows disabled for inactivity, preserves manually disabled workflows, and runs independently of collection failures.
+
+This is an interim mitigation, not a scheduling guarantee: GitHub does not document active-workflow renewal as a permanent exemption, and scheduled runs can be delayed or dropped. A scheduler on our own Linux server is the planned independent trigger. The guard does not collect data, create dummy commits, or change source/check timestamps; successful collection and published data freshness still need monitoring.
+<!-- /schedule-reliability -->
