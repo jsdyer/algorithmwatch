@@ -14,12 +14,13 @@
   <header><nav><a href="https://coolcode.ca/"><strong>&gt;_</strong> CoolCode.ca</a><a href="https://github.com/jsdyer/algorithmwatch">Source ↗</a></nav></header>
   <main>
     <section class="hero" aria-labelledby="title">
-      <h1 id="title">Algorithm <span>Watch</span></h1>
-      <p>Search the Government of Canada AI Register by institution, use, vendor and personal-information handling. Verified links show published impact assessments for selected systems.</p>
-      <p class="source" id="source-date">Source: Treasury Board of Canada Secretariat</p>
+      <h1 id="title">Search federal <span>AI systems</span></h1>
+      <p>Search by use, vendor or institution to see how the Government of Canada uses AI. Open a system for its reported use of personal information and any matched impact assessment.</p>
+      <!-- reviewed-example -->
     </section>
     <fieldset class="controls" id="controls" disabled>
       <label>Search systems<input id="query" type="search" placeholder="Try visa, Westlaw or facial recognition"></label>
+      <div class="actions"><button id="assessed" type="button">Show systems with impact assessments</button></div>
       <div class="filters">
         <label>Institution<select id="organization"><option value="">All institutions</option></select></label>
         <label>Status<select id="status"><option value="">Any status</option></select></label>
@@ -31,14 +32,15 @@
     <p class="message" id="message" aria-live="polite">Loading the register…</p>
     <div class="workspace">
       <section class="panel" aria-labelledby="results-label">
-        <div class="panel-head"><h2 id="results-label">Systems</h2><span class="meta" id="count"></span></div>
+        <div class="panel-head"><h2 id="results-label" tabindex="-1">Systems</h2><span class="meta" id="count"></span></div>
         <ul id="results" class="results"></ul>
         <div class="pagination"><button id="previous" type="button" disabled>Previous</button><span id="page"></span><button id="next" type="button" disabled>Next</button></div>
       </section>
       <article id="detail" class="panel detail" aria-label="System details" tabindex="-1"><p class="muted">Select a system to inspect the reported details.</p></article>
     </div>
+    <p class="source" id="source-date">Source: Treasury Board of Canada Secretariat</p>
     <p class="notice">The AI Register is an early public inventory assembled from several sources. Registration does not establish that the system is covered by the Directive on Automated Decision-Making. A missing assessment link means this index has no verified match.</p>
   </main>
-  <footer>Contains information licensed under the <a href="https://open.canada.ca/en/open-government-licence-canada">Open Government Licence – Canada</a>. <a href="https://open.canada.ca/data/dataset/fcbc0200-79ba-4fa4-94a6-00e32facea6b">Official register and change log</a> · <a href="https://coolcode.ca/governmentmemory/">Government Memory Map</a> · <a href="https://coolcode.ca/atip/">ATIP Explorer</a> <a href="https://coolcode.ca/report/?tool=algorithmwatch" referrerpolicy="no-referrer">Report an issue</a></footer>
+  <footer>Contains information licensed under the <a href="https://open.canada.ca/en/open-government-licence-canada">Open Government Licence – Canada</a>. <a href="https://open.canada.ca/data/dataset/fcbc0200-79ba-4fa4-94a6-00e32facea6b">Official register and change log</a> · <a href="https://coolcode.ca/governmentmemory/">Federal record inventories</a> · <a href="https://coolcode.ca/atip/">ATIP Explorer</a> <a href="https://coolcode.ca/report/?tool=algorithmwatch" referrerpolicy="no-referrer">Report an issue</a></footer>
 </body>
 </html>

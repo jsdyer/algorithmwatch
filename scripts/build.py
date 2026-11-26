@@ -3,6 +3,7 @@ import argparse
 import csv
 from datetime import date
 import hashlib
+from html import escape
 import io
 import json
 from pathlib import Path
@@ -99,6 +100,14 @@ def main():
     dist = ROOT / 'dist'
     shutil.rmtree(dist, ignore_errors=True)
     shutil.copytree(ROOT / 'web', dist)
+    # This example is published only while the official ID, title and organization still match.
+    visa = next((r for r in data['records'] if r['id'] == '2526-IRCC-009' and r.get('assessment')), None)
+    example = ''
+    if visa:
+        url = escape(visa['assessment']['record'], quote=True)
+        example = f'<p><a href="{url}">Read the impact assessment for overseas visa triage</a></p>'
+    entry = dist / 'index.html'
+    entry.write_text(entry.read_text(encoding='utf-8').replace('<!-- reviewed-example -->', example), encoding='utf-8')
     (dist / 'register.json').write_text(json.dumps(data, ensure_ascii=False, separators=(',', ':')))
     (dist / '.nojekyll').touch()
     print(f'{len(data["records"])} register entries; {sum("assessment" in r for r in data["records"])} verified AIA joins')

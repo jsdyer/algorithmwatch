@@ -127,6 +127,12 @@ id('export').addEventListener('click', () => {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 });
 for (const name of filters) id(name).addEventListener('input', () => search());
+id('assessed').addEventListener('click', () => {
+  for (const name of filters) id(name).value = '';
+  id('impact').value = 'linked';
+  search(null);
+  id('results-label').focus();
+});
 id('reset').addEventListener('click', () => {
   for (const name of filters) id(name).value = '';
   search(null);
